@@ -182,25 +182,6 @@ export default function AboutPage() {
         </section>
 
         {/* Команда */}
-        <section className="py-20 px-4">
-          <div className="container mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-16">
-              Наша команда
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl mx-auto">
-              {team.map((member, index) => (
-                <Card key={index} className="bg-zinc-900 border-white/10 p-8 text-center hover:-translate-y-2 transition-transform duration-300">
-                  <div className="w-40 h-40 rounded-full bg-gradient-to-br from-zinc-800 to-black mx-auto mb-8 flex items-center justify-center border-2 border-yellow-500/20">
-                    <Users className="h-16 w-16 text-gray-600" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-white mb-2">{member.name}</h3>
-                  <p className="text-yellow-500 font-medium mb-4 text-sm uppercase tracking-wide">{member.position}</p>
-                  <p className="text-gray-400 leading-relaxed">{member.description}</p>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </section>
 
         {/* CTA Section */}
         <section className="py-24 px-4">

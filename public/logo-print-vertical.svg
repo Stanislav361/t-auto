@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="360" height="300" viewBox="0 0 360 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g transform="translate(80, 15) scale(2)">
+    <path 
+      d="M5 45H95L90 35H75L65 20H35L20 35H10L5 45Z" 
+      stroke="#FFCC00" 
+      stroke-width="4" 
+      stroke-linejoin="round"
+      fill="none"
+    />
+    <circle cx="25" cy="45" r="8" stroke="#FFCC00" stroke-width="4" />
+    <circle cx="75" cy="45" r="8" stroke="#FFCC00" stroke-width="4" />
+    <path d="M10 25H30" stroke="#FFCC00" stroke-width="3" stroke-linecap="round" opacity="0.5"/>
+    <path d="M5 30H20" stroke="#FFCC00" stroke-width="3" stroke-linecap="round" opacity="0.5"/>
+  </g>
+
+  <!-- T-AUTO Центрировано -->
+  <text x="180" y="200" font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="64" fill="#000000" font-style="italic" text-anchor="middle">T<tspan fill="#FFCC00">-</tspan>AUTO</text>
+
+  <!-- ТЕХЦЕНТР Центрировано -->
+  <text x="180" y="240" font-family="Arial, sans-serif" font-weight="700" font-size="22" fill="#666666" letter-spacing="9" text-anchor="middle">ТЕХЦЕНТР</text>
+</svg>
