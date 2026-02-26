@@ -107,14 +107,14 @@ export default function AboutPage() {
                   </p>
                 </div>
                 
-                <div className="mt-10 grid grid-cols-2 gap-6">
-                  <div className="p-6 bg-white/5 rounded-2xl border border-white/10">
-                    <div className="text-4xl font-bold text-white mb-2">12+</div>
-                    <div className="text-sm text-gray-400 uppercase tracking-wider">Лет опыта</div>
+                <div className="mt-10 grid grid-cols-2 gap-4 sm:gap-6">
+                  <div className="p-4 sm:p-6 bg-white/5 rounded-2xl border border-white/10 text-center">
+                    <div className="text-3xl sm:text-4xl font-bold text-white mb-2">12+</div>
+                    <div className="text-xs sm:text-sm text-gray-400 uppercase tracking-wider">Лет опыта</div>
                   </div>
-                  <div className="p-6 bg-white/5 rounded-2xl border border-white/10">
-                    <div className="text-4xl font-bold text-white mb-2">5000+</div>
-                    <div className="text-sm text-gray-400 uppercase tracking-wider">Клиентов</div>
+                  <div className="p-4 sm:p-6 bg-white/5 rounded-2xl border border-white/10 text-center">
+                    <div className="text-3xl sm:text-4xl font-bold text-white mb-2">5000+</div>
+                    <div className="text-xs sm:text-sm text-gray-400 uppercase tracking-wider">Клиентов</div>
                   </div>
                 </div>
               </div>
@@ -184,19 +184,19 @@ export default function AboutPage() {
         {/* Команда */}
 
         {/* CTA Section */}
-        <section className="py-24 px-4">
+        <section className="py-12 sm:py-24 px-4">
           <div className="container mx-auto">
-            <Card className="bg-gradient-to-r from-zinc-900 to-zinc-800 border-white/10 p-12 md:p-20 text-center relative overflow-hidden">
+            <Card className="bg-gradient-to-r from-zinc-900 to-zinc-800 border-white/10 p-6 sm:p-12 md:p-20 text-center relative overflow-hidden">
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-yellow-500 to-transparent opacity-50" />
               
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 relative z-10">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 sm:mb-6 relative z-10">
                 Готовы доверить нам свой автомобиль?
               </h2>
-              <p className="text-gray-400 mb-10 relative z-10 max-w-2xl mx-auto text-lg">
+              <p className="text-gray-400 mb-6 sm:mb-10 relative z-10 max-w-2xl mx-auto text-base sm:text-lg">
                 Запишитесь на диагностику или консультацию прямо сейчас. Мы гарантируем профессиональный подход и качество.
               </p>
-              <div className="relative z-10">
-                <Button asChild size="lg" className="bg-yellow-500 text-black hover:bg-yellow-400 font-bold px-10 h-14 text-lg">
+              <div className="relative z-10 flex justify-center">
+                <Button asChild size="lg" className="bg-yellow-500 text-black hover:bg-yellow-400 font-bold px-8 sm:px-10 h-12 sm:h-14 text-base sm:text-lg w-full sm:w-auto">
                   <a href="tel:+79160005454">Связаться с нами</a>
                 </Button>
               </div>
