@@ -1,0 +1,36 @@
+[
+  {
+    "id": 1,
+    "title": "Детейлинг",
+    "description": "Профессиональная обработка кузова, защитные покрытия, полировка",
+    "href": "/services#detailing",
+    "image": "/images/2.jpg",
+    "icon": "Sparkles"
+  },
+  {
+    "id": 2,
+    "title": "Кузов/Покраска",
+    "description": "Восстановление геометрии, покраска, ремонт кузовных элементов",
+    "href": "/services#bodywork",
+    "image": "/images/3.webp",
+    "icon": "Car"
+  },
+  {
+    "id": 3,
+    "title": "Стекла",
+    "description": "Бронирование лобового стекла и оптики, тонирование",
+    "href": "/services#glass",
+    "image": "/images/4.jpg",
+    "icon": "Shield"
+  },
+  {
+    "id": 4,
+    "title": "Доп. услуги",
+    "description": "Шумоизоляция, установка оборудования, программное обеспечение",
+    "href": "/services#additional",
+    "image": "/images/5.jpg",
+    "icon": "Wrench"
+  }
+]
+
+
