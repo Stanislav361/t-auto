@@ -65,20 +65,20 @@ export default function AboutPage() {
       
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="relative bg-zinc-900 py-32 overflow-hidden min-h-[600px] flex items-center">
-          <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-background z-10" />
+        <section className="relative bg-zinc-900 py-16 sm:py-32 overflow-hidden min-h-[400px] sm:min-h-[600px] flex items-center">
+          <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-transparent to-background z-10" />
           <div 
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-60 bg-fixed"
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-60 sm:bg-fixed"
             style={{ backgroundImage: "url('/images/OIG4.jpg')" }}
           />
           
           <div className="container mx-auto px-4 relative z-20">
             <div className="max-w-4xl">
               <Badge className="bg-yellow-500 text-black border-0 mb-6 px-4 py-1 text-sm font-bold shadow-[0_0_20px_rgba(234,179,8,0.4)]">О нас</Badge>
-              <h1 className="text-5xl md:text-8xl font-black text-white mb-8 drop-shadow-xl">
+              <h1 className="text-3xl sm:text-5xl md:text-8xl font-black text-white mb-4 sm:mb-8 drop-shadow-xl">
                 T-AUTO
               </h1>
-              <p className="text-xl md:text-2xl text-white font-medium max-w-2xl leading-relaxed drop-shadow-md">
+              <p className="text-base sm:text-xl md:text-2xl text-white font-medium max-w-2xl leading-relaxed drop-shadow-md">
                 Профессиональная команда, объединившая лучших специалистов для обслуживания вашего автомобиля.
               </p>
             </div>

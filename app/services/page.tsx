@@ -286,7 +286,7 @@ export default function ServicesPage() {
         <section className="relative bg-zinc-900 py-12 sm:py-24 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-b from-black via-zinc-900 to-background" />
           <div 
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40 bg-fixed"
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40 sm:bg-fixed"
             style={{ backgroundImage: "url('/images/photo_2026-02-19_11-58-11.jpg')" }}
           />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(255,204,0,0.05),transparent_50%)]" />
