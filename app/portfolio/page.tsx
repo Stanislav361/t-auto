@@ -78,15 +78,6 @@ export default function PortfolioPage() {
       image: "/images/photo_2026-02-19_12-14-53.jpg"
     },
     {
-      id: 7,
-      category: "Доп. услуги",
-      title: "Шумоизоляция салона",
-      description: "Полная шумоизоляция салона автомобиля",
-      tags: ["Шумоизоляция"],
-      icon: <Volume2 className="h-8 w-8" />,
-      image: "/images/1111.jpg"
-    },
-    {
       id: 8,
       category: "Стекла",
       title: "Тонирование стекол",
