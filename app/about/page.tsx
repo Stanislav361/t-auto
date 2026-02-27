@@ -107,16 +107,6 @@ export default function AboutPage() {
                   </p>
                 </div>
                 
-                <div className="mt-10 grid grid-cols-2 gap-4 sm:gap-6">
-                  <div className="p-4 sm:p-6 bg-white/5 rounded-2xl border border-white/10 text-center">
-                    <div className="text-3xl sm:text-4xl font-bold text-white mb-2">12+</div>
-                    <div className="text-xs sm:text-sm text-gray-400 uppercase tracking-wider">Лет опыта</div>
-                  </div>
-                  <div className="p-4 sm:p-6 bg-white/5 rounded-2xl border border-white/10 text-center">
-                    <div className="text-3xl sm:text-4xl font-bold text-white mb-2">5000+</div>
-                    <div className="text-xs sm:text-sm text-gray-400 uppercase tracking-wider">Клиентов</div>
-                  </div>
-                </div>
               </div>
               
               <div className="relative">
