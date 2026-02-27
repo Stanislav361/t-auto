@@ -28,8 +28,15 @@ import Image from "next/image"
 
 export default function Home() {
   const [showSplash, setShowSplash] = useState(true)
+  const [reviews, setReviews] = useState<Array<{id: number; name: string; rating: number; text: string}>>([])
 
-  // Prevent scrolling while splash is shown
+  useEffect(() => {
+    fetch('/api/data/reviews')
+      .then(res => res.json())
+      .then(data => setReviews(data))
+      .catch(() => {})
+  }, [])
+
   useEffect(() => {
     if (showSplash) {
       document.body.style.overflow = 'hidden'
@@ -99,38 +106,6 @@ export default function Home() {
     },
   ]
 
-  const reviews = [
-    {
-      name: "Дмитрий Барановский",
-      rating: 5,
-      text: "Отличный сервис! Сделали детейлинг моей Tesla, результат превзошел ожидания. Мастера профессионалы своего дела."
-    },
-    {
-      name: "Елена Корчагина",
-      rating: 5,
-      text: "Обратилась за покраской бампера. Работа выполнена качественно и в срок. Рекомендую!"
-    },
-    {
-      name: "Алексей Козлов",
-      rating: 5,
-      text: "Установили бронирование стекла и тонирование. Все сделано аккуратно, без единой царапины. Спасибо!"
-    },
-    {
-      name: "Андрей Вебер",
-      rating: 5,
-      text: "Ребята молодцы, работают грамотно , оперативно. Покатался на гольф каре , топ фишка)"
-    },
-    {
-      name: "Игорь Ефсеев",
-      rating: 5,
-      text: "Приезжал на покраску, все сделали быстро и качественно. Цены нормальные, не завышают. Мастера вежливые, все объяснили что и как делали. Буду обращаться еще."
-    },
-    {
-      name: "Анна Аванесянц",
-      rating: 5,
-      text: "Делала керамику на машину, очень довольна результатом! Машина блестит как новая. Ребята аккуратные, ничего не поцарапали. Еще и на гольф-каре покатали пока ждала, приятный бонус)"
-    },
-  ]
 
   return (
     <div className="min-h-screen flex flex-col bg-background animate-in fade-in duration-1000">
