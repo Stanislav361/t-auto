@@ -39,7 +39,7 @@ export default function PortfolioPage() {
       description: "Восстановление и покраска переднего бампера",
       tags: ["Покраска", "Кузовной ремонт"],
       icon: <Car className="h-8 w-8" />,
-      image: "/images/photo_2026-02-19_12-14-58.jpg"
+      image: "/images/1515.jpg"
     },
     {
       id: 3,
