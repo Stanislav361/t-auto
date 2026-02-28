@@ -30,7 +30,7 @@ export default function PortfolioPage() {
       description: "Полная обработка кузова керамическим покрытием",
       tags: ["Керамика", "Полировка", "Защита"],
       icon: <Sparkles className="h-8 w-8" />,
-      image: "/images/photo_2026-02-19_12-17-20.jpg" // Added image path
+      image: "/images/1414.jpg" 
     },
     {
       id: 2,
