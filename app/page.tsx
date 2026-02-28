@@ -359,37 +359,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Отзывы */}
-        <section className="py-20 px-4">
-          <div className="container mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-16">
-              Отзывы клиентов
-            </h2>
-            
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-8">
-              {reviews.map((review, index) => (
-                <Card key={index} className="bg-zinc-900 border-white/10 p-5 sm:p-8 relative overflow-hidden group hover:border-yellow-500/30 transition-colors">
-                  <div className="absolute top-0 right-0 p-6 opacity-5 group-hover:opacity-10 transition-opacity">
-                    <Star className="h-24 w-24 text-white" />
-                  </div>
-                  
-                  <div className="flex items-center gap-1 mb-6">
-                    {Array.from({ length: review.rating }).map((_, i) => (
-                      <Star key={i} className="h-5 w-5 fill-yellow-500 text-yellow-500" />
-                    ))}
-                  </div>
-                  <p className="text-gray-300 mb-8 italic relative z-10 text-lg leading-relaxed">"{review.text}"</p>
-                  <div className="flex items-center gap-4 mt-auto">
-                    <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-sm font-bold text-white">
-                      {review.name.charAt(0)}
-                    </div>
-                    <p className="text-white font-bold">{review.name}</p>
-                  </div>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </section>
 
         {/* Контакты (краткая версия) */}
         <section className="bg-black text-white">
