@@ -199,6 +199,7 @@ export default function ServicesPage() {
   // ===== 2) АВТОМОЕЧНЫЙ КОМПЛЕКС =====
   const carwashServices = [
     { name: "Комплексная мойка кузова", price: "От 1 500 ₽", icon: <Droplets className="h-5 w-5" /> },
+    { name: "Нано мойка", price: "Цена уточняется", icon: <Sparkles className="h-5 w-5" /> },
     { name: "Мойка двигателя", price: "От 3 000 ₽", icon: <Settings className="h-5 w-5" /> },
     { name: "Химчистка салона", price: "От 8 000 ₽", icon: <Sparkles className="h-5 w-5" /> },
     { name: "Полировка кузова", price: "От 5 000 ₽", icon: <ShieldCheck className="h-5 w-5" /> },
@@ -245,6 +246,7 @@ export default function ServicesPage() {
     { name: "Нанесение Антидождь", price: "От 8 000 ₽", icon: <Droplets className="h-5 w-5" /> },
     { name: "Калибровка камеры ADAS", price: "Цена уточняется", icon: <Settings className="h-5 w-5" /> },
     { name: "Оклейка стекол пленкой", price: "От 15 000 ₽", icon: <Film className="h-5 w-5" /> },
+    { name: "Полировка стекол", price: "Цена уточняется", icon: <Sparkles className="h-5 w-5" /> },
   ]
 
   const toggleCategory = (index: number) => {

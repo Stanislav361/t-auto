@@ -66,17 +66,7 @@ export default function ContactsPage() {
               
               <div className="space-y-10">
                 <div>
-                  <h3 className="text-xl font-bold text-yellow-500 mb-2">Детейлинг, Автомойка, Шиномонтаж:</h3>
-                  <p className="text-xl text-white">Тел.: <a href="tel:+79160005454" className="hover:text-yellow-500 transition-colors">+7 (916) 000-54-54</a></p>
-                </div>
-
-                <div>
-                  <h3 className="text-xl font-bold text-yellow-500 mb-2">Автосервис, Запчасти, Кузовной ремонт:</h3>
-                  <p className="text-xl text-white">Тел.: <a href="tel:+79160005454" className="hover:text-yellow-500 transition-colors">+7 (916) 000-54-54</a></p>
-                </div>
-
-                <div>
-                  <h3 className="text-xl font-bold text-yellow-500 mb-2">По вопросам сотрудничества:</h3>
+                  <h3 className="text-xl font-bold text-yellow-500 mb-2">По всем вопросам:</h3>
                   <p className="text-xl text-white">Тел.: <a href="tel:+79160005454" className="hover:text-yellow-500 transition-colors">+7 (916) 000-54-54</a></p>
                 </div>
 
@@ -90,7 +80,7 @@ export default function ContactsPage() {
                 <div>
                   <h3 className="text-xl font-bold text-yellow-500 mb-2">Режим работы:</h3>
                   <p className="text-lg text-white">
-                    Пн-Пт с 09:00 до 21:00, Сб-Вс с 09:00 до 21:00
+                    Пн-Пт с 09:00 до 21:00, Сб-Вс с 10:00 до 21:00
                   </p>
                 </div>
               </div>

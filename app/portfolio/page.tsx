@@ -129,120 +129,17 @@ export default function PortfolioPage() {
         {/* Portfolio Grid */}
         <section className="py-20 px-4">
           <div className="container mx-auto">
-            {/* Categories Filter */}
-            <div className="flex flex-wrap gap-4 justify-center mb-16">
-              {categories.map((category) => (
-                <Badge
-                  key={category}
-                  onClick={() => setActiveCategory(category)}
-                  className={`cursor-pointer px-6 py-3 text-sm transition-all ${
-                    activeCategory === category
-                      ? "bg-yellow-500 text-black border-yellow-500 font-bold"
-                      : "bg-zinc-900 text-white border-white/10 hover:bg-yellow-500/20 hover:text-yellow-500 hover:border-yellow-500/30"
-                  }`}
-                >
-                  {category}
-                </Badge>
-              ))}
-            </div>
-
-            {/* Portfolio Items */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredItems.map((item) => (
-                <Card
-                  key={item.id}
-                  className="bg-zinc-900 border-white/10 overflow-hidden hover:border-yellow-500/50 transition-all group hover:-translate-y-1 duration-300"
-                >
-                  {/* Image Placeholder */}
-                  <div 
-                    className="relative h-64 bg-zinc-800 cursor-pointer overflow-hidden group"
-                    onClick={() => item.image && setSelectedImage(item.image)}
-                  >
-                    {item.image ? (
-                      <div className="absolute inset-0">
-                        <Image 
-                          src={item.image} 
-                          alt={item.title} 
-                          fill 
-                          className="object-cover transition-transform duration-500 group-hover:scale-110" 
-                        />
-                        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors" />
-                        
-                        {/* Логотип T-AUTO ТЕХЦЕНТР на всех изображениях с рамкой */}
-                        <div className="absolute bottom-3 right-3 z-10">
-                          <div className="bg-black/80 backdrop-blur-sm border-2 border-yellow-500/50 rounded-lg px-3 py-2 flex items-center gap-2">
-                            <svg 
-                              width="28" 
-                              height="28" 
-                              viewBox="0 0 100 60" 
-                              fill="none" 
-                              xmlns="http://www.w3.org/2000/svg"
-                              className="text-yellow-500 flex-shrink-0"
-                            >
-                              <path 
-                                d="M5 45H95L90 35H75L65 20H35L20 35H10L5 45Z" 
-                                stroke="currentColor" 
-                                strokeWidth="3" 
-                                strokeLinejoin="round"
-                                fill="none"
-                              />
-                              <circle cx="25" cy="45" r="6" stroke="currentColor" strokeWidth="3" />
-                              <circle cx="75" cy="45" r="6" stroke="currentColor" strokeWidth="3" />
-                              <path 
-                                d="M10 25H30" 
-                                stroke="currentColor" 
-                                strokeWidth="2" 
-                                strokeLinecap="round" 
-                                className="opacity-50"
-                              />
-                              <path 
-                                d="M5 30H20" 
-                                stroke="currentColor" 
-                                strokeWidth="2" 
-                                strokeLinecap="round" 
-                                className="opacity-50"
-                              />
-                            </svg>
-                            <div className="flex flex-col leading-none">
-                              <span className="font-black text-base tracking-tighter text-white uppercase italic transform -skew-x-12">
-                                T<span className="text-yellow-500">-</span>AUTO
-                              </span>
-                              <span className="text-[7px] font-bold text-gray-300 tracking-[0.15em] uppercase">
-                                ТЕХЦЕНТР
-                              </span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    ) : (
-                      <div className="h-full w-full bg-gradient-to-br from-zinc-800 to-black flex items-center justify-center">
-                        <div className="text-gray-600 group-hover:text-yellow-500 transition-colors transform group-hover:scale-110 duration-500">
-                          {item.icon}
-                        </div>
-                      </div>
-                    )}
-                  </div>
-                  
-                  <div className="p-8">
-                    <Badge className="bg-yellow-500/10 text-yellow-500 border-yellow-500/20 mb-4">
-                      {item.category}
-                    </Badge>
-                    <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-yellow-500 transition-colors">{item.title}</h3>
-                    <p className="text-gray-400 mb-6 leading-relaxed">{item.description}</p>
-                    <div className="flex flex-wrap gap-2">
-                      {item.tags.map((tag, index) => (
-                        <Badge
-                          key={index}
-                          variant="outline"
-                          className="border-white/10 text-gray-500 text-xs"
-                        >
-                          {tag}
-                        </Badge>
-                      ))}
-                    </div>
-                  </div>
-                </Card>
-              ))}
+            {/* База данных обновляется */}
+            <div className="py-24 text-center">
+              <div className="w-24 h-24 mx-auto mb-8 rounded-full bg-yellow-500/20 flex items-center justify-center">
+                <Sparkles className="h-12 w-12 text-yellow-500" />
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                База данных обновляется
+              </h2>
+              <p className="text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed">
+                Мы обновляем портфолио наших работ. Скоро здесь появятся новые примеры выполненных проектов.
+              </p>
             </div>
 
             {/* CTA */}
