@@ -73,7 +73,7 @@ export default function ContactsPage() {
                 <div>
                   <h3 className="text-xl font-bold text-yellow-500 mb-2">Адрес:</h3>
                   <p className="text-lg text-white leading-relaxed">
-                    г. Москва, ул. Удальцова д. 54
+                    г. Москва, ул. Удальцова д. 56
                   </p>
                 </div>
 

@@ -84,7 +84,7 @@ export function Footer() {
             <ul className="space-y-4">
               <li className="flex items-start gap-3 text-sm text-gray-400">
                 <MapPin className="h-5 w-5 text-yellow-500 flex-shrink-0" />
-                <span>Москва. Ул. Удальцова 54</span>
+                <span>Москва. Ул. Удальцова 56</span>
               </li>
               <li className="flex items-center gap-3 text-sm text-gray-400">
                 <Phone className="h-5 w-5 text-yellow-500 flex-shrink-0" />
