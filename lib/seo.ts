@@ -64,7 +64,6 @@ export function getLocalBusinessJsonLd() {
       "Автосервис, автомойка, автоателье, стекла в Москве. Обслуживание электромобилей и гибридов. Ул. Удальцова, 56.",
     url: SITE_URL,
     telephone: "+7-916-000-54-54",
-    email: undefined,
     address: {
       "@type": "PostalAddress",
       streetAddress: "ул. Удальцова, д. 56",

@@ -1,13 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import {
-  SITE_URL,
-  SEO_KEYWORDS,
-  OG_IMAGE_FALLBACK,
-  GEO,
-  PAGE_META,
-} from "@/lib/seo";
+import { SITE_URL, OG_IMAGE_FALLBACK, GEO, PAGE_META } from "@/lib/seo";
 import { SeoJsonLd } from "@/components/seo-json-ld";
 
 const geistSans = Geist({
