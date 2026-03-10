@@ -73,6 +73,9 @@ export const metadata: Metadata = {
     description: defaultMeta.description,
     images: [OG_IMAGE_FALLBACK],
   },
+  verification: {
+    yandex: "ae7fc6b3e6a18360",
+  },
   other: {
     "geo.region": GEO.region,
     "geo.placename": GEO.placename,
