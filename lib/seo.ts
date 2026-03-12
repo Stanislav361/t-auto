@@ -74,20 +74,14 @@ export function getLocalBusinessJsonLd() {
     },
     geo: {
       "@type": "GeoCoordinates",
-      latitude: 55.676789,
-      longitude: 37.493548,
+      latitude: 55.6868,
+      longitude: 37.4890,
     },
     openingHoursSpecification: [
       {
         "@type": "OpeningHoursSpecification",
-        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
         opens: "09:00",
-        closes: "21:00",
-      },
-      {
-        "@type": "OpeningHoursSpecification",
-        dayOfWeek: ["Saturday", "Sunday"],
-        opens: "10:00",
         closes: "21:00",
       },
     ],
@@ -98,7 +92,7 @@ export function getLocalBusinessJsonLd() {
     },
     sameAs: [
       "https://t.me/+79160005454",
-      "https://max.ru/chat/+79160005454",
+      "https://max.ru/u/f9LHodD0cOJ4zTv4Al45w-dROEV1XkduS0b1B4q1CL8kiBd_9H6i7MtsLok",
     ],
     image: OG_IMAGE_FALLBACK,
   }

@@ -366,7 +366,7 @@ export default function Home() {
             {/* Map - Left Side */}
             <div className="relative h-[400px] lg:h-auto w-full">
               <iframe 
-                src="https://yandex.ru/map-widget/v1/?ll=37.493548%2C55.676789&z=17&pt=37.493548,55.676789,pm2rdm" 
+                src="https://yandex.ru/map-widget/v1/?ll=37.4890%2C55.6868&z=17&pt=37.4890,55.6868,pm2rdm" 
                 width="100%" 
                 height="100%" 
                 style={{ border: 0 }}
@@ -394,7 +394,7 @@ export default function Home() {
                 <div>
                   <h3 className="text-xl font-bold text-yellow-500 mb-2">Режим работы:</h3>
                   <p className="text-lg text-white">
-                    Пн-Пт с 09:00 до 21:00, Сб-Вс с 10:00 до 21:00
+                    Ежедневно с 09:00 до 21:00
                   </p>
                 </div>
               </div>
@@ -411,7 +411,7 @@ export default function Home() {
                   </svg>
                 </a>
                 <a 
-                  href="https://max.ru/chat/+79160005454"
+                  href="https://max.ru/u/f9LHodD0cOJ4zTv4Al45w-dROEV1XkduS0b1B4q1CL8kiBd_9H6i7MtsLok"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-12 h-12 bg-white rounded-full flex items-center justify-center hover:bg-yellow-500 transition-colors"
