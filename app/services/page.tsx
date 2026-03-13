@@ -34,7 +34,8 @@ import {
   ChevronRight,
   Clock,
   Scissors,
-  GlassWater
+  GlassWater,
+  Search
 } from "lucide-react"
 
 interface ServiceItem {
@@ -49,7 +50,7 @@ interface ServiceCategory {
   items: ServiceItem[]
 }
 
-type TabType = 'autoservice' | 'carwash' | 'atelier' | 'glass' | 'coming'
+type TabType = 'autoservice' | 'carwash' | 'atelier' | 'glass' | 'diagnostics' | 'coming'
 
 export default function ServicesPage() {
   const [activeTab, setActiveTab] = useState<TabType>('autoservice')
@@ -235,6 +236,13 @@ export default function ServicesPage() {
     { name: "Полировка стекол", price: "Цена уточняется", icon: <Sparkles className="h-5 w-5" /> },
   ]
 
+  // ===== 5) ДИАГНОСТИКА =====
+  const diagnosticsServices = [
+    { name: "Считывание ошибок диагностическим сканером", price: "2 000 ₽", icon: <Search className="h-5 w-5" /> },
+    { name: "Удаление и сброс ошибок", price: "3 000 ₽", icon: <Settings className="h-5 w-5" /> },
+    { name: "Дополнительные работы по устранению ошибок", price: "от 3 000 ₽", icon: <Wrench className="h-5 w-5" /> },
+  ]
+
   const toggleCategory = (index: number) => {
     setOpenCategory(openCategory === index ? null : index)
   }
@@ -244,6 +252,7 @@ export default function ServicesPage() {
     { id: 'carwash' as TabType, label: 'Автомоечный комплекс', icon: <Droplets className="mr-2 h-5 w-5" /> },
     { id: 'atelier' as TabType, label: 'Автоателье', icon: <Scissors className="mr-2 h-5 w-5" /> },
     { id: 'glass' as TabType, label: 'Стекла', icon: <Shield className="mr-2 h-5 w-5" /> },
+    { id: 'diagnostics' as TabType, label: 'Диагностика', icon: <Search className="mr-2 h-5 w-5" /> },
     { id: 'coming' as TabType, label: 'Скоро открытие', icon: <Clock className="mr-2 h-5 w-5" /> },
   ]
 
@@ -285,7 +294,7 @@ export default function ServicesPage() {
                 Наши услуги
               </h1>
               <p className="text-base sm:text-xl text-gray-300 max-w-2xl leading-relaxed mb-6 sm:mb-10">
-                Полный спектр услуг по обслуживанию, ремонту и защите вашего автомобиля. 5 направлений — одна команда.
+                Полный спектр услуг по обслуживанию, ремонту и защите вашего автомобиля. 6 направлений — одна команда.
               </p>
 
               {/* Tabs Switcher — 5 направлений */}
@@ -472,7 +481,34 @@ export default function ServicesPage() {
             </section>
           )}
 
-          {/* ===== 5) СКОРО ОТКРЫТИЕ ===== */}
+          {/* ===== 5) ДИАГНОСТИКА ===== */}
+          {activeTab === 'diagnostics' && (
+            <section className="py-16 px-4">
+              <div className="container mx-auto">
+                <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-10">
+                  <div className="flex items-center gap-5">
+                    <div className="w-14 h-14 rounded-2xl bg-yellow-500/20 flex items-center justify-center text-yellow-500">
+                      <Search className="h-8 w-8" />
+                    </div>
+                    <div>
+                      <h2 className="text-3xl font-bold text-white">Диагностика</h2>
+                      <p className="text-gray-400 mt-2 text-lg">Компьютерная диагностика и устранение ошибок</p>
+                    </div>
+                  </div>
+                  <Button asChild variant="outline" size="lg" className="border-yellow-500/50 text-yellow-500 hover:bg-yellow-500/10 w-fit">
+                    <Link href="/contacts">Записаться</Link>
+                  </Button>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {diagnosticsServices.map((service, index) => (
+                    <SimpleServiceCard key={index} {...service} />
+                  ))}
+                </div>
+              </div>
+            </section>
+          )}
+
+          {/* ===== 6) СКОРО ОТКРЫТИЕ ===== */}
           {activeTab === 'coming' && (
             <section className="py-24 px-4">
               <div className="container mx-auto max-w-3xl text-center">

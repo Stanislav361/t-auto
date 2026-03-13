@@ -52,7 +52,7 @@ export default function ContactsPage() {
             {/* Map - Left Side */}
             <div className="relative h-[400px] lg:h-auto w-full">
               <iframe 
-                src="https://yandex.ru/map-widget/v1/?ll=37.4890%2C55.6868&z=17&pt=37.4890,55.6868,pm2rdm" 
+                src="https://yandex.ru/map-widget/v1/?ll=37.4897%2C55.6863&z=17&pt=37.4897,55.6863,pm2rdm" 
                 width="100%" 
                 height="100%" 
                 style={{ border: 0 }}
