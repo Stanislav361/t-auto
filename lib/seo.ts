@@ -1,8 +1,8 @@
 /**
- * SEO, Open Graph, гео-теги и ключевые слова для t-auto.online
+ * SEO, Open Graph, гео-теги и ключевые слова для t-auto.site
  */
 
-export const SITE_URL = "https://www.t-auto.online"
+export const SITE_URL = "https://www.t-auto.site"
 
 /** Варианты названия бренда для поиска "т авто", "t auto" и т.п. */
 export const BRAND_KEYWORDS = [

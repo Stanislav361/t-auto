@@ -16,6 +16,8 @@ const nextConfig: NextConfig = {
       { protocol: "https", hostname: "placehold.co" },
       { protocol: "https", hostname: "via.placeholder.com" },
       { protocol: "https", hostname: "ram-as-production.up.railway.app" },
+      { protocol: "https", hostname: "www.t-auto.site" },
+      { protocol: "https", hostname: "t-auto.site" },
       { protocol: "https", hostname: "www.t-auto.online" },
       { protocol: "https", hostname: "t-auto.online" },
     ],
