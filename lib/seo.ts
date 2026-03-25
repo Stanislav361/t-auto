@@ -45,8 +45,8 @@ export const OG_IMAGE_FALLBACK = `${SITE_URL}/images/photo_2026-02-19_11-58-43.j
 export const GEO = {
   region: "RU-MOW",
   placename: "Москва",
-  position: "55.676789;37.493548",
-  icbm: "55.676789, 37.493548",
+  position: "55.6863;37.4897",
+  icbm: "55.6863, 37.4897",
   address: "г. Москва, ул. Удальцова, д. 54",
   locality: "Москва",
   country: "Россия",

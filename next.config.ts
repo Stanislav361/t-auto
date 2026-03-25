@@ -18,8 +18,6 @@ const nextConfig: NextConfig = {
       { protocol: "https", hostname: "ram-as-production.up.railway.app" },
       { protocol: "https", hostname: "www.t-auto.site" },
       { protocol: "https", hostname: "t-auto.site" },
-      { protocol: "https", hostname: "www.t-auto.online" },
-      { protocol: "https", hostname: "t-auto.online" },
     ],
   },
   env: {
