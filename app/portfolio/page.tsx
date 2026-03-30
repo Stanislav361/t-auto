@@ -6,12 +6,7 @@ import { Card } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { 
-  Sparkles, 
-  Car, 
   Shield, 
-  Film,
-  Droplets,
-  Volume2,
   X
 } from "lucide-react"
 import { useState } from "react"
@@ -25,70 +20,20 @@ export default function PortfolioPage() {
   const portfolioItems = [
     {
       id: 1,
-      category: "Детейлинг",
-      title: "Керамическое покрытие",
-      description: "Полная обработка кузова керамическим покрытием",
-      tags: ["Керамика", "Полировка", "Защита"],
-      icon: <Sparkles className="h-8 w-8" />,
-      image: "/images/1414.jpg" 
-    },
-    {
-      id: 2,
-      category: "Кузов/Покраска",
-      title: "Покраска бампера",
-      description: "Восстановление и покраска переднего бампера",
-      tags: ["Покраска", "Кузовной ремонт"],
-      icon: <Car className="h-8 w-8" />,
-      image: "/images/1515.jpg"
-    },
-    {
-      id: 3,
       category: "Стекла",
-      title: "Бронирование лобового стекла",
-      description: "Установка защитной пленки на лобовое стекло",
-      tags: ["Бронирование", "Защита"],
+      title: "Замена автостекл",
+      description: "Замена и установка автостекол",
+      tags: ["Стекла", "Установка"],
       icon: <Shield className="h-8 w-8" />,
-      image: "/images/20220316-DSC04759.jpg"
-    },
-    {
-      id: 4,
-      category: "Детейлинг",
-      title: "Антидождь на весь кузов",
-      description: "Обработка всех стекол автомобиля",
-      tags: ["Антидождь", "Стекла"],
-      icon: <Droplets className="h-8 w-8" />,
-      image: "/images/i.jpg"
-    },
-    {
-      id: 5,
-      category: "Кузов/Покраска",
-      title: "Ремонт крыла после ДТП",
-      description: "Восстановление геометрии и покраска",
-      tags: ["Ремонт", "Покраска"],
-      icon: <Car className="h-8 w-8" />,
-      image: "/images/photo_2026-02-19_12-14-46.jpg"
-    },
-    {
-      id: 6,
-      category: "Детейлинг",
-      title: "Оклейка пленкой капота",
-      description: "Защитная пленка на капот автомобиля",
-      tags: ["Оклейка", "Защита"],
-      icon: <Film className="h-8 w-8" />,
-      image: "/images/photo_2026-02-19_12-14-53.jpg"
-    },
-    {
-      id: 8,
-      category: "Стекла",
-      title: "Тонирование стекол",
-      description: "Профессиональное тонирование всех стекол",
-      tags: ["Тонирование"],
-      icon: <Film className="h-8 w-8" />,
-      image: "/images/40.jpg"
+      images: [
+        "/images/zamena-avtostekol.png",
+        "/images/zamena-avtostekol-2.png",
+        "/images/zamena-avtostekol-3.png",
+      ],
     },
   ]
 
-  const categories = ["Все", "Детейлинг", "Кузов/Покраска", "Стекла", "Доп. услуги"]
+  const categories = ["Все", "Стекла"]
 
   const filteredItems = activeCategory === "Все" 
     ? portfolioItems 
@@ -129,20 +74,84 @@ export default function PortfolioPage() {
         {/* Portfolio Grid */}
         <section className="py-20 px-4">
           <div className="container mx-auto">
-            {/* База данных обновляется */}
-            <div className="py-24 text-center">
-              <div className="w-24 h-24 mx-auto mb-8 rounded-full bg-yellow-500/20 flex items-center justify-center">
-                <Sparkles className="h-12 w-12 text-yellow-500" />
-              </div>
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                База данных обновляется
-              </h2>
-              <p className="text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed">
-                Мы обновляем портфолио наших работ. Скоро здесь появятся новые примеры выполненных проектов.
-              </p>
+            <div className="flex flex-wrap gap-4 justify-center mb-16">
+              {categories.map((category) => (
+                <Badge
+                  key={category}
+                  onClick={() => setActiveCategory(category)}
+                  className={`cursor-pointer px-6 py-3 text-sm transition-all ${
+                    activeCategory === category
+                      ? "bg-yellow-500 text-black border-yellow-500 font-bold"
+                      : "bg-zinc-900 text-white border-white/10 hover:bg-yellow-500/20 hover:text-yellow-500 hover:border-yellow-500/30"
+                  }`}
+                >
+                  {category}
+                </Badge>
+              ))}
             </div>
 
-            {/* CTA */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {filteredItems.map((item) => (
+                <Card
+                  key={item.id}
+                  className="bg-zinc-900 border-white/10 overflow-hidden hover:border-yellow-500/50 transition-all group hover:-translate-y-1 duration-300"
+                >
+                  <div
+                    className="relative h-64 bg-zinc-800 cursor-pointer overflow-hidden group"
+                    onClick={() => item.images[0] && setSelectedImage(item.images[0])}
+                  >
+                    <div className="absolute inset-0">
+                      <Image
+                        src={item.images[0]}
+                        alt={item.title}
+                        fill
+                        className="object-cover transition-transform duration-500 group-hover:scale-110"
+                      />
+                      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors" />
+                    </div>
+                  </div>
+
+                  <div className="p-8">
+                    <Badge className="bg-yellow-500/10 text-yellow-500 border-yellow-500/20 mb-4">
+                      {item.category}
+                    </Badge>
+                    <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-yellow-500 transition-colors">
+                      {item.title}
+                    </h3>
+                    <p className="text-gray-400 mb-6 leading-relaxed">{item.description}</p>
+                    <div className="flex flex-wrap gap-2">
+                      {item.tags.map((tag, index) => (
+                        <Badge
+                          key={index}
+                          variant="outline"
+                          className="border-white/10 text-gray-500 text-xs"
+                        >
+                          {tag}
+                        </Badge>
+                      ))}
+                    </div>
+                    <div className="mt-6 grid grid-cols-3 gap-3">
+                      {item.images.map((image, index) => (
+                        <button
+                          key={image}
+                          type="button"
+                          className="relative h-20 overflow-hidden rounded-lg border border-white/10 hover:border-yellow-500/50 transition-colors"
+                          onClick={() => setSelectedImage(image)}
+                        >
+                          <Image
+                            src={image}
+                            alt={`${item.title} ${index + 1}`}
+                            fill
+                            className="object-cover"
+                          />
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                </Card>
+              ))}
+            </div>
+
             <div className="mt-20 text-center">
               <Card className="bg-zinc-900 border-white/10 p-12 inline-block max-w-3xl w-full">
                 <h3 className="text-2xl font-bold text-white mb-4">
