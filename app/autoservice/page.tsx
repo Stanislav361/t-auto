@@ -18,6 +18,7 @@ import {
   Cog,
   Car,
   Wrench,
+  Zap,
   ChevronDown,
   ChevronRight,
   Phone
