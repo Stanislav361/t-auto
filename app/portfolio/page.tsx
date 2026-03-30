@@ -6,7 +6,12 @@ import { Card } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { 
+  Sparkles,
   Shield, 
+  Volume2,
+  Wrench,
+  Compass,
+  Droplets,
   X
 } from "lucide-react"
 import { useState } from "react"
@@ -31,9 +36,81 @@ export default function PortfolioPage() {
         "/images/zamena-avtostekol-3.png",
       ],
     },
+    {
+      id: 2,
+      category: "Доп. услуги",
+      title: "Шумоизоляция салона",
+      description: "Комплексная шумоизоляция салона и багажного отделения автомобиля.",
+      tags: ["Шумоизоляция", "Салон"],
+      icon: <Volume2 className="h-8 w-8" />,
+      images: ["/images/shumoizolyaciya-salona.png"],
+    },
+    {
+      id: 3,
+      category: "Детейлинг",
+      title: "Полировка кузова",
+      description: "Восстановление блеска, глубины цвета и внешнего вида кузова.",
+      tags: ["Полировка", "Кузов"],
+      icon: <Sparkles className="h-8 w-8" />,
+      images: ["/images/polirovka-kuzova.png"],
+    },
+    {
+      id: 4,
+      category: "Автосервис",
+      title: "Сход развал",
+      description: "Проверка и регулировка углов установки колес на стенде.",
+      tags: ["Сход-развал", "Подвеска"],
+      icon: <Compass className="h-8 w-8" />,
+      images: ["/images/shod-razval.png"],
+    },
+    {
+      id: 5,
+      category: "Автосервис",
+      title: "Диагностика ходовой части",
+      description: "Проверка подвески и выявление неисправностей ходовой части.",
+      tags: ["Диагностика", "Ходовая"],
+      icon: <Wrench className="h-8 w-8" />,
+      images: ["/images/diagnostika-hodovoy.png"],
+    },
+    {
+      id: 6,
+      category: "Автосервис",
+      title: "Замена приводного ремня с роликами натяжителями",
+      description: "Подбор и установка новых комплектующих приводного механизма.",
+      tags: ["Ремень", "Ролики"],
+      icon: <Wrench className="h-8 w-8" />,
+      images: ["/images/privodnoy-remen.png"],
+    },
+    {
+      id: 7,
+      category: "Автосервис",
+      title: "Замена трансмиссионного масла в АКПП",
+      description: "Обслуживание коробки передач с заменой трансмиссионного масла.",
+      tags: ["АКПП", "Масло"],
+      icon: <Droplets className="h-8 w-8" />,
+      images: ["/images/maslo-akpp.png"],
+    },
+    {
+      id: 8,
+      category: "Автосервис",
+      title: "Замена масла ДВС",
+      description: "Замена моторного масла и базовых расходных материалов двигателя.",
+      tags: ["ДВС", "Масло"],
+      icon: <Droplets className="h-8 w-8" />,
+      images: ["/images/maslo-akpp.png"],
+    },
+    {
+      id: 9,
+      category: "Автосервис",
+      title: "Техническое обслуживание (ТО)",
+      description: "Плановое обслуживание автомобиля с заменой расходных материалов.",
+      tags: ["ТО", "Обслуживание"],
+      icon: <Wrench className="h-8 w-8" />,
+      images: ["/images/to-obsluzhivanie.png"],
+    },
   ]
 
-  const categories = ["Все", "Стекла"]
+  const categories = ["Все", "Автосервис", "Стекла", "Детейлинг", "Доп. услуги"]
 
   const filteredItems = activeCategory === "Все" 
     ? portfolioItems 
