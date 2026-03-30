@@ -207,23 +207,25 @@ export default function PortfolioPage() {
                         </Badge>
                       ))}
                     </div>
-                    <div className="mt-6 grid grid-cols-3 gap-3">
-                      {item.images.map((image, index) => (
-                        <button
-                          key={image}
-                          type="button"
-                          className="relative h-20 overflow-hidden rounded-lg border border-white/10 hover:border-yellow-500/50 transition-colors"
-                          onClick={() => setSelectedImage(image)}
-                        >
-                          <Image
-                            src={image}
-                            alt={`${item.title} ${index + 1}`}
-                            fill
-                            className="object-cover"
-                          />
-                        </button>
-                      ))}
-                    </div>
+                    {item.images.length > 1 && (
+                      <div className="mt-6 grid grid-cols-3 gap-3">
+                        {item.images.map((image, index) => (
+                          <button
+                            key={image}
+                            type="button"
+                            className="relative h-20 overflow-hidden rounded-lg border border-white/10 hover:border-yellow-500/50 transition-colors"
+                            onClick={() => setSelectedImage(image)}
+                          >
+                            <Image
+                              src={image}
+                              alt={`${item.title} ${index + 1}`}
+                              fill
+                              className="object-cover"
+                            />
+                          </button>
+                        ))}
+                      </div>
+                    )}
                   </div>
                 </Card>
               ))}
